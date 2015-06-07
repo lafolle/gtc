@@ -17,7 +17,7 @@ Usage of gtc:
 ###Todo
 1. Tests
 
-References:
+###References:
 1. http://blog.golang.org/go-concurrency-patterns-timing-out-and
 2. https://golang.org/pkg/os/exec/
 3. https://golang.org/pkh/os
