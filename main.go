@@ -55,22 +55,22 @@ func setcmd(c []string) *exec.Cmd {
 	var cmd *exec.Cmd
 	if len(c) == 0 {
 		fmt.Println("No command provided. Aborting.")
-        return nil
+		return nil
 	} else if len(c) == 1 {
 		cmd = exec.Command(c[0])
 	} else {
 		cmd = exec.Command(c[0], c[1:]...)
 	}
-    return cmd
+	return cmd
 }
 
 func main() {
 	flag.Parse()
 
-    cmd := setcmd(flag.Args())
-    if cmd == nil {
-        os.Exit(1)
-    }
+	cmd := setcmd(flag.Args())
+	if cmd == nil {
+		os.Exit(1)
+	}
 
 	done := make(chan error, 1)
 	defer close(done)
@@ -78,7 +78,7 @@ func main() {
 
 	select {
 	case <-done:
-        // TODO: for making gtc cross platform type of sys() need to be checked
+		// TODO: for making gtc cross platform type of sys() need to be checked
 		ws, _ := cmd.ProcessState.Sys().(syscall.WaitStatus)
 		exit_status := ws.ExitStatus()
 		if *preservestatus == true {
@@ -90,4 +90,3 @@ func main() {
 		}
 	}
 }
-
