@@ -11,7 +11,7 @@ If no time is specified, the command is run until it exits.(or until 290 years)
 ```
 Usage of gtc:
   -p=false: perserve status of cmd
-  -t=9.152s: duration of cmd
+  -t=0s: duration of cmd
 ```
 
 ###Todo
