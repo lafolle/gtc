@@ -16,6 +16,7 @@ Usage of gtc:
 
 ###Todo
 1. Tests
+2. Improvise on the design of communication betweeen main and gocoroutine
 
 ###References:
 1. http://blog.golang.org/go-concurrency-patterns-timing-out-and
