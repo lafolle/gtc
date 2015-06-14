@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -13,7 +12,7 @@ import (
 )
 
 var (
-	dur            *time.Duration = flag.Duration("t", 0, "duration of cmd")
+	dur            *time.Duration = flag.Duration("t", 2522880*time.Hour, "duration of cmd") // default val is no. of hours in 288 years
 	preservestatus *bool          = flag.Bool("p", false, "perserve status of cmd")
 )
 
@@ -74,18 +73,6 @@ func main() {
 	}
 
 	done := make(chan error, 1)
-    if *dur == 0 {
-        startcmd(cmd, done)
-        for _ = range done {
-            ws, _ := cmd.ProcessState.Sys().(syscall.WaitStatus)
-            exit_status := ws.ExitStatus()
-            if *preservestatus == true {
-                os.Exit(exit_status)
-            } else {
-                os.Exit(0)
-            }
-        }
-    }
 
 	defer close(done)
 	go startcmd(cmd, done)
