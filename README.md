@@ -1,8 +1,8 @@
 
 ###Go Timed Command
 
-`gtc` runs the command for the specificed period of time.
-If no time is specified, the command is run until it exits.
+`gtc` runs a command for a specificed period of time.
+If no time is specified, command is run until it exits.
 
 ###Install
 `go get github.com/lafolle/gtc`
