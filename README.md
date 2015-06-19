@@ -17,6 +17,7 @@ Usage of gtc:
 ###Todo
 1. Tests
 2. Improvise on the design of communication betweeen main and gocoroutine
+3. Relay signals to `gtc` to the command being executed
 
 ###Test checks
 1. gtc -t=12s ls -R /
