@@ -12,6 +12,7 @@ If no duration is provided, `gtc` runs the command unitl it exits by itself.
 Usage of gtc:
   -p=false: perserve status of cmd
   -t=2522880h: duration of cmd
+  command
 ```
 
 ###Todo
