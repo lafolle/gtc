@@ -1,13 +1,13 @@
 
-###Go Timed Command
+### Go Timed Command
 
 `gtc` runs the command for at most given duration.
 If no duration is provided, `gtc` runs the command unitl it exits by itself.
 
-###Install
+### Install
 `go get github.com/lafolle/gtc`
 
-###Usage
+### Usage
 ```
 Usage of gtc:
   -p=false: perserve status of cmd
@@ -15,12 +15,12 @@ Usage of gtc:
   command
 ```
 
-###Todo
+### Todo
 1. Tests
 2. Improvise on the design of communication betweeen main and gocoroutine
 3. Relay signals to `gtc` to the command being executed
 
-###Test checks
+### Test checks
 1. gtc -t=12s ls -R /
 	should run the command for 12 secs
 2. gtc ls -R /
@@ -33,7 +33,7 @@ Usage of gtc:
 	This needs to be investigated as currently gtc does not 
 	its stdin to `cmd`'s stdin
 
-###References:
+### References:
 1. http://blog.golang.org/go-concurrency-patterns-timing-out-and
 2. https://golang.org/pkg/os/exec/
 3. https://golang.org/pkh/os
